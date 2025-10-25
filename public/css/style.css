@@ -1,0 +1,156 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.c {
+    background-color: white;
+}
+
+.container {
+    flex: 1;
+}
+
+/* navBar */
+nav {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #000 !important;
+}
+
+/* Footer */
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links {
+    width: 100%;
+}
+
+.f-info-social i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.f-info-social,
+.f-info-links,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Cards */
+.card-listing {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text {
+    font-weight: 400 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/* card Effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background: white;
+}
+
+/* New PAge */
+.new-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Show Image */
+.show-image {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+}
+
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+#filter {
+    text-align: center;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+#filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#filter a {
+    font-size: 0.8rem;
+}
+
+.a {
+    font-size: 1rem !important;
+}
+
+/* Map */
+#map {
+    width: 80vh;
+    height: 400px;
+}

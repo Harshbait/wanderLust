@@ -1,0 +1,163 @@
+<% layout('/layouts/boilerplate') %>
+
+  <style>
+    .tax-info {
+      display: none;
+    }
+
+    .op {
+      display: inline;
+    }
+
+    .tax-toggle {
+      border: 1px solid black;
+      border-radius: 1rem;
+      height: 3.5rem;
+      padding: 1rem;
+      margin-left: 5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .filter-btn {
+      min-width: 90px;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      background-color: #dc3545;
+      color: white;
+      transform: translateY(-3px);
+    }
+  </style>
+
+  <body>
+
+    <div class="container my-3">
+      <div
+        class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 py-3 px-2 rounded bg-white overflow-auto">
+
+        <a href="/listings/category/trending"
+          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+          <i class="fa-solid fa-fire fs-4"></i>
+          <span class="small">Trending</span>
+        </a>
+
+        <a href="/listings/category/rooms"
+          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+          <i class="fa-solid fa-bed fs-4"></i>
+          <span class="small">Rooms</span>
+        </a>
+
+        <a href="/listings/category/iconic cities"
+          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+          <i class="fa-solid fa-mountain-city fs-4"></i>
+          <span class="small">Iconic Cities</span>
+        </a>
+
+        <a href="/listings/category/mountain"
+          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+          <i class="fa-solid fa-mountain-sun fs-4"></i>
+          <span class="small">Mountain</span>
+        </a>
+
+        <a href="/listings/category/castle"
+          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+          <i class="fa-brands fa-fort-awesome fs-4"></i>
+          <span class="small">Castle</span>
+        </a>
+
+        <a href="/listings/category/amazing pools"
+          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+          <i class="fa-solid fa-person-swimming fs-4"></i>
+          <span class="small">Amazing Pools</span>
+        </a>
+
+        <a href="/listings/category/camping"
+          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+          <i class="fa-solid fa-campground fs-4"></i>
+          <span class="small">Camping</span>
+        </a>
+
+        <a href="/listings/category/farm"
+          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+          <i class="fa-solid fa-cow fs-4"></i>
+          <span class="small">Farm</span>
+        </a>
+
+        <a href="/listings/category/arctic"
+          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+          <i class="fa-solid fa-snowman fs-4"></i>
+          <span class="small">Arctic</span>
+        </a>
+
+        <div class="form-check form-switch ms-md-3 align-self-center">
+          <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+          <label class="form-check-label small" for="switchCheckDefault">Show after taxes</label>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- <form action="/listings/new" method="get">
+        <button>Create new button</button>
+    </form> -->
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+
+      <% for(let listing of allListings) { %>
+        <a href="/listings/<%= listing._id %>" class="listing-link">
+          <div class="card card-listing col">
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 20rem;">
+            <div class="card-img-overlay"></div>
+            <div class="card-body">
+              <p class="card-text">
+                <b>
+                  <%= listing.title %>.
+                </b>
+                <br>
+              <p class="op">&#8377; <%=(listing.price.toLocaleString('en-IN'))%>/night.</p>
+              <i class="tax-info">
+                &nbsp;&nbsp;&#8377; <%= (Number(listing.price) * 1.18).toLocaleString('en-IN') %>/night.
+              </i>
+              </p>
+
+            </div>
+          </div>
+        </a>
+        <% } %>
+    </div>
+
+
+    <!-- <ul> -->
+
+    <!-- <% for(let listing of allListings) { %>
+                        <li> <a href="/listings/<%= listing._id %>">
+                                <%= listing.title %>
+                            </a> </li>
+                        <% } %> -->
+    <!-- </ul> -->
+
+    <script>
+      let taxSwitch = document.getElementById("switchCheckDefault")
+
+      taxSwitch.addEventListener('click', () => {
+        let taxInfo = document.getElementsByClassName('tax-info')
+        let op = document.getElementsByClassName('op')
+        for (info of taxInfo) {
+
+          if (info.style.display != 'inline') {
+            info.style.display = "inline"
+          } else {
+            info.style.display = "none"
+          }
+
+        }
+        for (const inf of op) {
+          inf.style.display = (inf.style.display === 'none') ? 'inline' : 'none';
+        }
+      })
+    </script>
+
+  </body>
