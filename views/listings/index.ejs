@@ -29,75 +29,86 @@
       color: white;
       transform: translateY(-3px);
     }
+    @media (max-width: 576px) {
+  .filter-btn i {
+    font-size: 0.9rem; /* smaller for mobile only */
+  }
+  .filter-btn span {
+    font-size: 0.75rem;
+  }
+  .category-scroll {
+    padding-bottom: 8px;
+  }
+}
+
   </style>
 
   <body>
 
-    <div class="container my-3">
-      <div
-        class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 py-3 px-2 rounded bg-white overflow-auto">
+   <div class="container my-3">
+  <div
+    class="d-flex flex-nowrap flex-md-wrap justify-content-start gap-2 py-3 px-2 rounded bg-white overflow-auto category-scroll">
 
-        <a href="/listings/category/trending"
-          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
-          <i class="fa-solid fa-fire fs-4"></i>
-          <span class="small">Trending</span>
-        </a>
+    <a href="/listings/category/trending"
+      class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+      <i class="fa-solid fa-fire fs-5"></i>
+      <span class="small">Trending</span>
+    </a>
 
-        <a href="/listings/category/rooms"
-          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
-          <i class="fa-solid fa-bed fs-4"></i>
-          <span class="small">Rooms</span>
-        </a>
+    <a href="/listings/category/rooms"
+      class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+      <i class="fa-solid fa-bed fs-5"></i>
+      <span class="small">Rooms</span>
+    </a>
 
-        <a href="/listings/category/iconic cities"
-          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
-          <i class="fa-solid fa-mountain-city fs-4"></i>
-          <span class="small">Iconic Cities</span>
-        </a>
+    <a href="/listings/category/iconic cities"
+      class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+      <i class="fa-solid fa-mountain-city fs-5"></i>
+      <span class="small">Iconic Cities</span>
+    </a>
 
-        <a href="/listings/category/mountain"
-          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
-          <i class="fa-solid fa-mountain-sun fs-4"></i>
-          <span class="small">Mountain</span>
-        </a>
+    <a href="/listings/category/mountain"
+      class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+      <i class="fa-solid fa-mountain-sun fs-5"></i>
+      <span class="small">Mountain</span>
+    </a>
 
-        <a href="/listings/category/castle"
-          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
-          <i class="fa-brands fa-fort-awesome fs-4"></i>
-          <span class="small">Castle</span>
-        </a>
+    <a href="/listings/category/castle"
+      class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+      <i class="fa-brands fa-fort-awesome fs-5"></i>
+      <span class="small">Castle</span>
+    </a>
 
-        <a href="/listings/category/amazing pools"
-          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
-          <i class="fa-solid fa-person-swimming fs-4"></i>
-          <span class="small">Amazing Pools</span>
-        </a>
+    <a href="/listings/category/amazing pools"
+      class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+      <i class="fa-solid fa-person-swimming fs-5"></i>
+      <span class="small">Amazing Pools</span>
+    </a>
 
-        <a href="/listings/category/camping"
-          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
-          <i class="fa-solid fa-campground fs-4"></i>
-          <span class="small">Camping</span>
-        </a>
+    <a href="/listings/category/camping"
+      class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+      <i class="fa-solid fa-campground fs-5"></i>
+      <span class="small">Camping</span>
+    </a>
 
-        <a href="/listings/category/farm"
-          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
-          <i class="fa-solid fa-cow fs-4"></i>
-          <span class="small">Farm</span>
-        </a>
+    <a href="/listings/category/farm"
+      class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+      <i class="fa-solid fa-cow fs-5"></i>
+      <span class="small">Farm</span>
+    </a>
 
-        <a href="/listings/category/arctic"
-          class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
-          <i class="fa-solid fa-snowman fs-4"></i>
-          <span class="small">Arctic</span>
-        </a>
+    <a href="/listings/category/arctic"
+      class="btn btn-outline-danger d-flex flex-column align-items-center text-center filter-btn">
+      <i class="fa-solid fa-snowman fs-5"></i>
+      <span class="small">Arctic</span>
+    </a>
 
-        <div class="form-check form-switch ms-md-3 align-self-center">
-          <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-          <label class="form-check-label small" for="switchCheckDefault">Show after taxes</label>
-        </div>
-
-      </div>
+    <div class="form-check form-switch align-self-center ms-2 ms-md-3">
+      <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+      <label class="form-check-label small" for="switchCheckDefault">Show after taxes</label>
     </div>
+  </div>
+</div>
 
 
     <!-- <form action="/listings/new" method="get">
