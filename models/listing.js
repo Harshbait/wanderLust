@@ -32,7 +32,7 @@ const listengSchema = new Schema({
     },
     category: {
         type: String,
-        enum: ["trending", "rooms", "iconic cities", "mountain", "castle", "amazing pools", "camping", "farm", "arctic"]
+        enum: ["trending", "rooms", "iconic cities", "mountain", "castle", "amazing pools", "camping", "farm", "lake", "arctic"]
 
     },
     geometry: {
